@@ -5,8 +5,8 @@ const ErrorPage = () => {
   return (
     <section className='flex items-center h-screen p-16 bg-gray-100 text-gray-900'>
       <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
+        {/* <svg
+          xmlns='https://t3.ftcdn.net/jpg/01/14/81/86/240_F_114818612_D26GJxxdrZzuZZ2x8SWNhHFnDHxjCD3F.jpg'
           viewBox='0 0 512 512'
           className='w-40 h-40 text-red-600'
         >
@@ -29,9 +29,10 @@ const ErrorPage = () => {
             fill='currentColor'
             points='383.958 182.63 360.042 161.37 338.671 185.412 314.63 164.042 293.37 187.958 317.412 209.329 296.042 233.37 319.958 254.63 341.329 230.588 365.37 251.958 386.63 228.042 362.588 206.671 383.958 182.63'
           ></polygon>
-        </svg>
+        </svg> */}
+        <img src="https://t3.ftcdn.net/jpg/01/14/81/86/240_F_114818612_D26GJxxdrZzuZZ2x8SWNhHFnDHxjCD3F.jpg" alt="" />
         <div className='max-w-md text-center'>
-          <h2 className='mb-8 font-extrabold text-9xl text-gray-600'>
+          <h2 className='mb-8 font-extrabold text-9xl text-red-600'>
             <span className='sr-only'>Error</span> {status || 404}
           </h2>
           <p className='text-2xl font-semibold md:text-3xl mb-8'>
