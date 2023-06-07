@@ -25,9 +25,9 @@ const Login = () => {
                 timer: 1500
               })
         })
-        .catch(error=> {
-            console.log(error);
-        })
+        // .catch(error=> {
+        //     console.log(error);
+        // })
 
     }
     return (
