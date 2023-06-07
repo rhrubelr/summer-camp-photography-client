@@ -1,10 +1,12 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
+import Banner from '../Banner/Banner';
+import Carusel from '../Carusel/Carusel';
 
 const Home = () => {
     return (
         <div>
-            <h1>home</h1>
+            <Banner></Banner>
+            
         </div>
     );
 };
