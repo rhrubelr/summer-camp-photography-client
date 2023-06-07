@@ -1,6 +1,5 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Carusel from '../Carusel/Carusel';
 
 const Home = () => {
     return (
