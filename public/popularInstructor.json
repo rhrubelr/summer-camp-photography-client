@@ -1,203 +1,223 @@
 [
     {
       "id": 1,
-      "title": "Landscape",
+      "name": "Landscape",
       "description": "Capture the beauty of nature and scenic views.",
-      "location": "Mountains",
+      "student": "234",
       "photographer": "John Smith",
       "price": 100,
       "rating": 4.5,
-      "image": "landscape.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://images.unsplash.com/photo-1554080353-321e452ccf19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBob3RvZ3JhcGh5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 2,
-      "title": "Portrait",
+      "name": "Portrait",
       "description": "Capture the personality and essence of individuals.",
-      "location": "Studio",
+      "student": "342",
       "photographer": "Jane Doe",
       "price": 150,
       "rating": 4.2,
-      "image": "portrait.jpg"
+      "email": "davdffdfid.johnson@example.com",
+      "image": "https://plus.unsplash.com/premium_photo-1661573121995-a85fab517628?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBob3RvZ3JhcGh5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 3,
-      "title": "Wildlife",
+      "name": "Wildlife",
       "description": "Capture the fascinating world of animals and wildlife.",
-      "location": "Safari",
+      "student": "111",
       "photographer": "David Johnson",
       "price": 200,
       "rating": 4.8,
-      "image": "wildlife.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1324227708/photo/photographer-sightseeing-in-cusco-and-taking-pictures.webp?b=1&s=170667a&w=0&k=20&c=OlkNs5Aaj-g6uGLzqZSXTacdVeQ-yW_HOVKWKjchbD8="
     },
     {
       "id": 4,
-      "title": "Street Photography",
+      "name": "Street Photography",
       "description": "Capture the raw moments of urban life.",
-      "location": "City Streets",
+      "student": "120",
       "photographer": "Emily Thompson",
       "price": 120,
       "rating": 4.6,
-      "image": "street.jpg"
+      "email": "da.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1363758198/photo/woman-photographer-with-digital-camera-outdoor-portrait.webp?b=1&s=170667a&w=0&k=20&c=eq4j0tQzxTJ3ZMn7JjDWAyRmLnyVetJjzNPIqhhtGh8="
     },
     {
       "id": 5,
-      "title": "Macro",
+      "name": "Macro",
       "description": "Explore the intricate details of small subjects.",
-      "location": "Garden",
+      "student": "212",
       "photographer": "Michael Brown",
       "price": 90,
       "rating": 4.3,
-      "image": "macro.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://images.unsplash.com/photo-1648205213977-075109f0b9e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG9ncmFwaGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 6,
-      "title": "Fashion",
+      "name": "Fashion",
       "description": "Capture the latest trends and styles.",
-      "location": "Runway",
+      "student": "132",
       "photographer": "Sophia Garcia",
       "price": 180,
       "rating": 4.9,
-      "image": "fashion.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1372507295/photo/portrait-of-cheerful-young-asian-woman-with-backpack-taking-photo-at-camera-profesional.webp?b=1&s=170667a&w=0&k=20&c=_sk4EIWDZNjbYFySC_wageQvHVnCGoe9InSgZ_uj7mU="
     },
     {
       "id": 7,
-      "title": "Aerial",
+      "name": "Aerial",
       "description": "Capture stunning views from above.",
-      "location": "Drone",
+      "student": "90",
       "photographer": "Robert Wilson",
       "price": 250,
       "rating": 4.7,
-      "image": "aerial.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 8,
-      "title": "Black and White",
+      "name": "Black and White",
       "description": "Emphasize contrast and capture timeless moments.",
-      "location": "Various",
+      "student": "30",
       "photographer": "Olivia Lee",
       "price": 110,
       "rating": 4.4,
-      "image": "bw.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://images.unsplash.com/photo-1603574670812-d24560880210?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 9,
-      "title": "Sports",
+      "name": "Sports",
       "description": "Capture the intensity and action of sports events.",
-      "location": "Stadium",
+      "student": "70",
       "photographer": "Daniel Martinez",
       "price": 170,
       "rating": 4.6,
-      "image": "sports.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://plus.unsplash.com/premium_photo-1675561314143-0201e5ac7c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 10,
-      "title": "Wedding",
+      "name": "Wedding",
       "description": "Capture the joy and love of wedding celebrations.",
-      "location": "Church",
+      "student": "20",
       "photographer": "Sarah Wilson",
       "price": 300,
       "rating": 4.9,
-      "image": "wedding.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://images.unsplash.com/photo-1490638114763-02630949efda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
       "id": 11,
-      "title": "Travel",
+      "name": "Travel",
       "description": "Capture the essence of different cultures and places.",
-      "location": "Various",
+      "student": "Various",
       "photographer": "Thomas Anderson",
       "price": 140,
       "rating": 4.3,
-      "image": "travel.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1484233481/photo/female-photographer-on-the-streets-of-nyc.webp?b=1&s=170667a&w=0&k=20&c=T6BEIOPpiw0g7LzdbulFBtrHUSXrDuL0Yj_BADRSgB4="
     },
     {
       "id": 12,
-      "title": "Food",
+      "name": "Food",
       "description": "Capture delicious and appetizing culinary creations.",
-      "location": "Restaurant",
+      "student": "Restaurant",
       "photographer": "Isabella Brown",
       "price": 95,
       "rating": 4.2,
-      "image": "food.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1335303339/photo/wedding-photographer.webp?b=1&s=170667a&w=0&k=20&c=s-ozU8CHvJbv0wCv6wHzFLGTLtiK6XoOg5aAsAPrD7s="
     },
     {
       "id": 13,
-      "title": "Event",
+      "name": "Event",
       "description": "Capture memorable moments from special events.",
-      "location": "Banquet Hall",
+      "student": "Banquet Hall",
       "photographer": "Lucas Taylor",
       "price": 200,
       "rating": 4.7,
-      "image": "event.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1431986910/photo/wedding-photography-and-photographer-with-bride-and-groom-posing-for-a-picture-with-wedding.webp?b=1&s=170667a&w=0&k=20&c=PY7Gn4qHSpg-XUBkPLWAG3S8tMJ_AHgSckl6k88iXRI="
     },
     {
       "id": 14,
-      "title": "Product",
+      "name": "Product",
       "description": "Capture the beauty and details of commercial products.",
-      "location": "Studio",
+      "student": "Studio",
       "photographer": "Sophie Johnson",
       "price": 150,
       "rating": 4.4,
-      "image": "product.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1358843391/photo/a-man-photographer-with-a-camera-takes-a-photo-in-the-dark-copy-space.webp?b=1&s=170667a&w=0&k=20&c=jLe8k-qDqvClJ-WulsEWscHb24UbxDBF5Uwuo4qQlag="
     },
     {
       "id": 15,
-      "title": "Nature",
+      "name": "Nature",
       "description": "Capture the wonders of flora and fauna.",
-      "location": "Forest",
+      "student": "Forest",
       "photographer": "Ethan Green",
       "price": 130,
+      "email": "david.johnson@example.com",
       "rating": 4.5,
-      "image": "nature.jpg"
+      "image": "https://media.istockphoto.com/id/1160926571/photo/portrait-of-male-elementary-school-teacher-standing-in-classroom.jpg?s=612x612&w=0&k=20&c=l_CVoCyASapk6kyppTvBGWZzNULZJauCrMBDSE3wI_k="
     },
     {
       "id": 16,
-      "title": "Abstract",
+      "name": "Abstract",
       "description": "Capture unique and conceptual images.",
-      "location": "Various",
+      "student": "Various",
       "photographer": "Jessica Davis",
       "price": 120,
       "rating": 4.3,
-      "image": "abstract.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/826213524/photo/middle-aged-black-female-teacher-smiling-in-school-corridor.jpg?s=612x612&w=0&k=20&c=iT6uus3WJuhyMFGK8dysIRD38c794md4Wm5ZEG9l9vM="
     },
     {
       "id": 17,
-      "title": "Architecture",
+      "name": "Architecture",
       "description": "Capture the beauty of buildings and structures.",
-      "location": "City",
+      "student": "City",
       "photographer": "Benjamin Wilson",
       "price": 180,
       "rating": 4.6,
-      "image": "architecture.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1338408207/photo/happy-woman-in-sunny-day-having-online-meeting.jpg?s=612x612&w=0&k=20&c=oSSUbG30EbjfUH7ZXpMvG7AeWO17ygfitIm6NmRwYLM="
     },
     {
       "id": 18,
-      "title": "Night",
+      "name": "Night",
       "description": "Capture the magical atmosphere of nighttime scenes.",
-      "location": "City",
+      "student": "City",
       "photographer": "Natalie Thompson",
       "price": 160,
       "rating": 4.4,
-      "image": "night.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1358852907/photo/math-teacher-explaining-the-new-subject.jpg?s=612x612&w=0&k=20&c=FF2G5q8Ow97E3PHQ0mzxtSG6wYWdIismaa3LfzDe3Ek="
     },
     {
       "id": 19,
-      "title": "Underwater",
+      "name": "Underwater",
       "description": "Capture the enchanting world beneath the surface.",
-      "location": "Ocean",
+      "student": "Ocean",
       "photographer": "Jacob Anderson",
       "price": 220,
       "rating": 4.8,
-      "image": "underwater.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/515264750/photo/portrait-of-confident-asian-female-teacher-in-classroom.jpg?s=612x612&w=0&k=20&c=3FVu2N4WqFT2LWo6SGh9PcHNzcIrsFnjTkcXEDq7HWo="
     },
     {
       "id": 20,
-      "title": "Fashion Editorial",
+      "name": "Fashion Editorial",
       "description": "Capture striking fashion stories and concepts.",
-      "location": "Studio",
+      "student": "Studio",
       "photographer": "Megan Roberts",
       "price": 200,
       "rating": 4.7,
-      "image": "fashion-editorial.jpg"
+      "email": "david.johnson@example.com",
+      "image": "https://media.istockphoto.com/id/1129638598/photo/businessman-in-suit-looking-at-camera-making-conference-video-call.jpg?s=612x612&w=0&k=20&c=K1ufuNnodv6yPNnG9Sih6QT7O-fvfz33NnWcg1nDvgQ="
     }
   ]
   
