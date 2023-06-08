@@ -1,0 +1,203 @@
+[
+    {
+      "id": 1,
+      "title": "Landscape",
+      "description": "Capture the beauty of nature and scenic views.",
+      "location": "Mountains",
+      "photographer": "John Smith",
+      "price": 100,
+      "rating": 4.5,
+      "image": "landscape.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Portrait",
+      "description": "Capture the personality and essence of individuals.",
+      "location": "Studio",
+      "photographer": "Jane Doe",
+      "price": 150,
+      "rating": 4.2,
+      "image": "portrait.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Wildlife",
+      "description": "Capture the fascinating world of animals and wildlife.",
+      "location": "Safari",
+      "photographer": "David Johnson",
+      "price": 200,
+      "rating": 4.8,
+      "image": "wildlife.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Street Photography",
+      "description": "Capture the raw moments of urban life.",
+      "location": "City Streets",
+      "photographer": "Emily Thompson",
+      "price": 120,
+      "rating": 4.6,
+      "image": "street.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Macro",
+      "description": "Explore the intricate details of small subjects.",
+      "location": "Garden",
+      "photographer": "Michael Brown",
+      "price": 90,
+      "rating": 4.3,
+      "image": "macro.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Fashion",
+      "description": "Capture the latest trends and styles.",
+      "location": "Runway",
+      "photographer": "Sophia Garcia",
+      "price": 180,
+      "rating": 4.9,
+      "image": "fashion.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Aerial",
+      "description": "Capture stunning views from above.",
+      "location": "Drone",
+      "photographer": "Robert Wilson",
+      "price": 250,
+      "rating": 4.7,
+      "image": "aerial.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Black and White",
+      "description": "Emphasize contrast and capture timeless moments.",
+      "location": "Various",
+      "photographer": "Olivia Lee",
+      "price": 110,
+      "rating": 4.4,
+      "image": "bw.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Sports",
+      "description": "Capture the intensity and action of sports events.",
+      "location": "Stadium",
+      "photographer": "Daniel Martinez",
+      "price": 170,
+      "rating": 4.6,
+      "image": "sports.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Wedding",
+      "description": "Capture the joy and love of wedding celebrations.",
+      "location": "Church",
+      "photographer": "Sarah Wilson",
+      "price": 300,
+      "rating": 4.9,
+      "image": "wedding.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Travel",
+      "description": "Capture the essence of different cultures and places.",
+      "location": "Various",
+      "photographer": "Thomas Anderson",
+      "price": 140,
+      "rating": 4.3,
+      "image": "travel.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Food",
+      "description": "Capture delicious and appetizing culinary creations.",
+      "location": "Restaurant",
+      "photographer": "Isabella Brown",
+      "price": 95,
+      "rating": 4.2,
+      "image": "food.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Event",
+      "description": "Capture memorable moments from special events.",
+      "location": "Banquet Hall",
+      "photographer": "Lucas Taylor",
+      "price": 200,
+      "rating": 4.7,
+      "image": "event.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Product",
+      "description": "Capture the beauty and details of commercial products.",
+      "location": "Studio",
+      "photographer": "Sophie Johnson",
+      "price": 150,
+      "rating": 4.4,
+      "image": "product.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Nature",
+      "description": "Capture the wonders of flora and fauna.",
+      "location": "Forest",
+      "photographer": "Ethan Green",
+      "price": 130,
+      "rating": 4.5,
+      "image": "nature.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Abstract",
+      "description": "Capture unique and conceptual images.",
+      "location": "Various",
+      "photographer": "Jessica Davis",
+      "price": 120,
+      "rating": 4.3,
+      "image": "abstract.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Architecture",
+      "description": "Capture the beauty of buildings and structures.",
+      "location": "City",
+      "photographer": "Benjamin Wilson",
+      "price": 180,
+      "rating": 4.6,
+      "image": "architecture.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Night",
+      "description": "Capture the magical atmosphere of nighttime scenes.",
+      "location": "City",
+      "photographer": "Natalie Thompson",
+      "price": 160,
+      "rating": 4.4,
+      "image": "night.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Underwater",
+      "description": "Capture the enchanting world beneath the surface.",
+      "location": "Ocean",
+      "photographer": "Jacob Anderson",
+      "price": 220,
+      "rating": 4.8,
+      "image": "underwater.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Fashion Editorial",
+      "description": "Capture striking fashion stories and concepts.",
+      "location": "Studio",
+      "photographer": "Megan Roberts",
+      "price": 200,
+      "rating": 4.7,
+      "image": "fashion-editorial.jpg"
+    }
+  ]
+  
