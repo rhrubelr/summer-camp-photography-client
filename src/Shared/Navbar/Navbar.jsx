@@ -3,29 +3,27 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProviders';
 
 const Navbar = () => {
-    const { user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    const handleLogOut =()=>{
+    const handleLogOut = () => {
         logOut()
-        .then( ()=> {
+            .then(() => {
 
-        })
-        .catch(error=> {
-            console.log(error)
-        })
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
     const NavItems = <>
         <li><Link to='/'><a>Home</a></Link></li>
         <li><Link to='/instructor'><a>Instructor</a></Link></li>
         <li><Link to='/classes'><a>Classes</a></Link></li>
-         
-         {
-            user ? <><button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></> : <> <button className='btn btn-ghost'>Login</button> </>
-         }
+
+
     </>
     return (
         <div>
-            
+
 
             <div className="navbar bg-teal-700 text-white">
                 <div className="navbar-start">
@@ -37,7 +35,7 @@ const Navbar = () => {
                             {NavItems}
                         </ul>
                     </div>
-                    <img className='w-8 h-8 sm:w-10 sm:h-10 cursor-pointer'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDg0Zfjx1LSbn8-wBGoM4MhBD5DIM6WdzjoVqxKobG2HUDCg6yrKkB9R94B5SWLaZi1F0&usqp=CAU" alt="" />
+                    <img className='w-8 h-8 sm:w-10 sm:h-10 cursor-pointer' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDg0Zfjx1LSbn8-wBGoM4MhBD5DIM6WdzjoVqxKobG2HUDCg6yrKkB9R94B5SWLaZi1F0&usqp=CAU" alt="" />
                     <a className="btn btn-ghost normal-case text-xl"> Photography School</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -46,7 +44,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login"><a className="btn">Login</a></Link>
+                    {/* <Link to="/login"><a className="btn">Login</a></Link>
+                     */}
+                    {
+                        user ? <> <img src={user?.photoURL} alt="" />
+                        <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></> : <> <button className='btn btn-ghost'><Link to="/login">Login</Link></button> </>
+                    }
                 </div>
             </div>
         </div>

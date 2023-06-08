@@ -5,14 +5,17 @@ import { AuthContext } from "../../Provider/AuthProviders";
 
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { createUser } = useContext(AuthContext);
+    const { createUser,updateUserProfile } = useContext(AuthContext);
     const onSubmit = data =>{
         console.log(data)
         createUser(data.email, data.password)
         .then(result=>{
             const logedUser = result.user;
+            updateUserProfile(data.photoURL)
             console.log(logedUser);
+
         })
+        .catch(error=> console.log(error))
         
     }
     return (
@@ -33,8 +36,11 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Photo</span>
                                 </label>
-                                <input type="text" {...register("photoURL", { required: true })}  placeholder="photo url" className="input input-bordered" />
-                                { errors.firstName?.type === 'required' && <p className="text-red-400" role="alert"> Photo Url is required</p>}
+                                {/* <input type="text" {...register("photoURL", { required: true })}  placeholder="photo url" className="input input-bordered" />
+                                { errors.firstName?.type === 'required' && <p className="text-red-400" role="alert"> Photo Url is required</p>} */}
+
+                                <input type="text"  {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
+                                {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                             </div>
 
                             <div className="form-control">
@@ -49,7 +55,8 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" {...register("password", { required: true })}  placeholder="password" className="input input-bordered" />
+                                <input type="password" {...register("password",
+                                 { required: true })}  placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
