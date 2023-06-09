@@ -14,7 +14,7 @@ const InstructorCart = ({ popular }) => {
                     <h2 className="card-title">name: {name}</h2>
                     <p> Email: {email}</p>
                     <p> Student: {student}</p>
-                    <p> Rating:  <Rating style={{ maxWidth: 100 }} value={rating} readOnly /> </p>
+                    <p> Rating:  < Rating style={{ maxWidth: 100 }} value={rating} readOnly /> </p>
                     <p> price: ${price}</p>
                     <div className="card-actions">
                         <button className="btn btn-primary">Buy Now</button>

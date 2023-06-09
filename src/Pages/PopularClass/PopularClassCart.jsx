@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ClassesCart = ({ topClass }) => {
+const PopularClassCart = ({ topClass }) => {
     const {  name, image, available_seats,instructor, price } = topClass;
     return (
-        <div>
+        <div data-aos="zoom-in-up">
             <div className="card h-full w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl" />
@@ -22,4 +22,4 @@ const ClassesCart = ({ topClass }) => {
     );
 };
 
-export default ClassesCart;
+export default PopularClassCart;
