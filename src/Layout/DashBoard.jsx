@@ -14,18 +14,6 @@ const DashBoard = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         
 <div className="drawer lg:drawer-open">
@@ -33,6 +21,7 @@ const DashBoard = () => {
   <div className="drawer-content flex flex-col items-center justify-center">
     {/* Page content here */}
     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+    <Outlet></Outlet>
   
   </div> 
   <div className="drawer-side">
@@ -41,21 +30,18 @@ const DashBoard = () => {
       {/* Sidebar content here */}
       
 
-    <li><NavLink to='/deshbord/userhome'><FaHome></FaHome>Admin Home</NavLink></li>
-    <li><NavLink to='/deshbord/reservation'><FaUtensils></FaUtensils>  Add Items</NavLink></li>
-    <li><NavLink to='/deshbord/history'><FaWallet></FaWallet>Manage Items</NavLink></li>
-    <li><NavLink to='/deshbord/mycart'><FaBook></FaBook> Manage Booking</NavLink></li>
-    <li><NavLink to='/deshbord/allusers'> <FaUsers></FaUsers> All Users</NavLink></li>
+    <li><NavLink to='/deshbord/userhome'><FaHome></FaHome>User Home</NavLink></li>
+    <li><NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
+    My Selected Class <div className="badge badge-secondary"></div>
+    </NavLink></li>    
  
 
 
 
 <li><NavLink to='/deshbord/userhome'><FaHome></FaHome>User Home</NavLink></li>
-    <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> Reservation</NavLink></li>
+    <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> About Me</NavLink></li>
     <li><NavLink to='/deshbord/history'><FaWallet></FaWallet> Payment History</NavLink></li>
-    <li><NavLink to='/deshbord/mycart'><FaShoppingCart></FaShoppingCart>
-    Shoping Cart <div className="badge badge-secondary"></div>
-    </NavLink></li>
+    
     </ul>
   
   </div>
