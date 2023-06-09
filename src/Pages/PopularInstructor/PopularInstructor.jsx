@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import InstructorHooks from '../../Hooks/InstructorHooks';
 import PopularInsCart from '../PopularInsCart/PopularInsCart';
 
 const PopularInstructor = () => {
-    const [populars, setPopulars] = useState([])
 
-    useEffect(() => {
-        fetch("http://localhost:5000/instructor")
-            .then(res => res.json())
-            .then(data => {
-                setPopulars(data)
-            })
-    }, [])
+const [populars] = InstructorHooks(); 
+    // useEffect(() => {
+    //     fetch("http://localhost:5000/instructor")
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setPopulars(data)
+    //         })
+    // }, [])
 
     return (
         < div >
