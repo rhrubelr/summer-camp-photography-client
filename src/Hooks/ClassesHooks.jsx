@@ -5,7 +5,7 @@ const ClassesHooks = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect( ()=>{
-        fetch('popularClass.json')
+        fetch("http://localhost:5000/classes")
         .then(res=> res.json())
         .then(data=> {
             setClasses(data)

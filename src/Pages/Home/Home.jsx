@@ -10,7 +10,7 @@ const Home = () => {
             <h2 className='text-center font-extrabold text-4xl my-28'>Top Instructor: <span className='my-4  text-3xl font-bold text-orange-500 text-center'>Best Instructor List</span> </h2>
             <PopularInstructor></PopularInstructor>
 
-            <h2 className='text-center font-extrabold text-4xl my-28'> Top Class: <span className='my-4  text-3xl font-bold text-orange-500 text-center'>Best Instructor List</span> </h2>
+            <h2 className='text-center font-extrabold text-4xl my-28'> Top Class: <span className='my-4  text-3xl font-bold text-orange-500 text-center'>Best Classes List</span> </h2>
             <PopularClass></PopularClass>
         </div>
     );
