@@ -5,10 +5,10 @@ import '@smastrom/react-rating/style.css';
 const InstructorCart = ({ popular }) => {
     const { email, name, image, student, rating, price } = popular;
     return (
-        <div>
+        <div data-aos="zoom-out-up">
             <div className="card h-full w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src={image} alt="Shoes" className="rounded-xl" />
+                    <img src={image} alt="Shoes" className="rounded-full mx-center h-56 w-56" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">name: {name}</h2>
