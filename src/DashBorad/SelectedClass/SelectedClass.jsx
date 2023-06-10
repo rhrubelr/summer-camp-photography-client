@@ -3,6 +3,7 @@ import useEnroll from '../../Hooks/useEnroll';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const SelectedClass = () => {
     const [cart] = useEnroll();
@@ -11,6 +12,51 @@ const SelectedClass = () => {
 
 
     console.log(cart)
+
+
+
+
+
+
+    const handleDelete = (item)=>{
+        console.log(item)
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`http://localhost:5000/enroll/${item._id}`, {
+                            method: 'DELETE'
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            // console.log(data)
+                            if(data.deletedCount > 0){    
+                              refetch();              
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your Class has been deleted.',
+                                    'success'
+                                )
+                                
+                            }
+                        })
+        
+                    }
+                  })
+        
+        
+            }
+
+
+
+
+
     return (
         <div>
 
