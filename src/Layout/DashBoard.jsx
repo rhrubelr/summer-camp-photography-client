@@ -33,8 +33,12 @@ const DashBoard = () => {
       
 
     <li><NavLink to='/'><FaHome></FaHome>User Home</NavLink></li>
+    <li> <NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
+    My Selected Class <div className="badge badge-secondary"> {cart.length}</div>
+    </NavLink></li> 
+
     <li><NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
-    My Selected Class <div className="badge badge-secondary">{cart.length}</div>
+    My Enroll Class <div className="badge badge-secondary">{cart.length}</div>
     </NavLink></li>    
  
 
