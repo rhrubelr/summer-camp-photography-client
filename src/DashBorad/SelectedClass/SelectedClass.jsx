@@ -6,7 +6,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
 const SelectedClass = () => {
-    const [cart] = useEnroll();
+    const [cart, refetch] = useEnroll();
 
     const total = cart.reduce((sum, item) => item.price + sum, 0)
 

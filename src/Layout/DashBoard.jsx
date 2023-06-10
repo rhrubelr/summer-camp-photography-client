@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FaHome, FaCalendar, FaShoppingCart, FaWallet, FaUtensils, FaBook, FaUsers } from 'react-icons/fa'
+import useEnroll from "../Hooks/useEnroll";
 
 // import useCart from "../hooks/useCart";
 // import useAdmin from "../hooks/useAdmin";
@@ -12,6 +13,7 @@ const DashBoard = () => {
     // const isAdmin = true;
     // const [isAdmin]= useAdmin()
 
+    const [cart] = useEnroll();
 
 
     return (
@@ -30,15 +32,14 @@ const DashBoard = () => {
       {/* Sidebar content here */}
       
 
-    <li><NavLink to='/deshbord/userhome'><FaHome></FaHome>User Home</NavLink></li>
+    <li><NavLink to='/'><FaHome></FaHome>User Home</NavLink></li>
     <li><NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
-    My Selected Class <div className="badge badge-secondary"></div>
+    My Selected Class <div className="badge badge-secondary">{cart.length}</div>
     </NavLink></li>    
  
 
 
 
-<li><NavLink to='/deshbord/userhome'><FaHome></FaHome>User Home</NavLink></li>
     <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> About Me</NavLink></li>
     <li><NavLink to='/deshbord/history'><FaWallet></FaWallet> Payment History</NavLink></li>
     
