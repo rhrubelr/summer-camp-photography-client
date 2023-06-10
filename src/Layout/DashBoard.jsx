@@ -41,7 +41,7 @@ const DashBoard = () => {
 
 
     <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> About Me</NavLink></li>
-    <li><NavLink to='/deshbord/history'><FaWallet></FaWallet> Payment History</NavLink></li>
+    <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
     
     </ul>
   

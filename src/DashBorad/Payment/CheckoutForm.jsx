@@ -4,8 +4,10 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import { AuthContext } from '../../Provider/AuthProviders';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
+
+
 
 const CheckoutForm = ({price, cart}) => {
   // console.log(price)
@@ -62,7 +64,7 @@ const CheckoutForm = ({price, cart}) => {
           setCardError('');
           // console.log('PaymentMethod', paymentMethod);
         }
-
+console.log(paymentMethod)
         setProcessing(true)
 
 console.log(clientSecret)
@@ -82,6 +84,7 @@ console.log(clientSecret)
           console.log(confirmError)
         }
         console.log('paymentIntent', paymentIntent)
+        
         setProcessing(false)
         if(paymentIntent.status === 'succeeded'){
           setTransactionId(paymentIntent.id)
@@ -96,7 +99,7 @@ console.log(clientSecret)
             cartItems: cart.map(item => item._id),
             menuItems: cart.map(item => item.enrollId),
            image: cart.map(item => item.image),
-            className: cart.map(item => item.danceName)
+            className: cart.map(item => item.name)
           }
           axiosSecure.post('/payments', payment)
           .then(res => {
@@ -126,9 +129,9 @@ console.log(clientSecret)
             style: {
               base: {
                 fontSize: '16px',
-                color: 'black',
+                color: 'red',
                 '::placeholder': {
-                  color: 'black',
+                  color: 'red',
                 },
               },
               invalid: {
