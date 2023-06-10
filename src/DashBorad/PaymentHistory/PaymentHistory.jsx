@@ -6,7 +6,7 @@ const PaymentHistory = () => {
     const [myEnroll] = useMyEnroll('')
     console.log(myEnroll)
     return (
-        <div className="w-full pb-[700px]   text-white">
+        <div className="w-full pb-[700px]   text-red-500">
         <Helmet>
           <title>Bistro Boss | Dashboard | Payment-History</title>
         </Helmet>
@@ -18,7 +18,7 @@ const PaymentHistory = () => {
            className="table w-full">
             {/* head */}
             <thead>
-              <tr className="text-white text-xl">
+              <tr className="text-red-500 text-xl">
                 <th>#</th>
                 <th>Payment Email</th>
                 <th>Payment Date</th>

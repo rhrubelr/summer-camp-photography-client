@@ -15,7 +15,7 @@ const MyEnrollClass = () => {
 
 
     return (
-        <div className="w-full pb-[700px]   text-white">
+        <div className="w-full pb-[700px] ">
             <Helmet>
                 <title>Bistro Boss | Dashboard | My-Enroll-Class</title>
             </Helmet>
@@ -27,7 +27,7 @@ const MyEnrollClass = () => {
                     className="table w-full">
                     {/* head */}
                     <thead>
-                        <tr className="text-white text-xl">
+                        <tr className="text-red-400 text-xl">
                             <th>#</th>
                             <th>My Email</th>
                             <th>Class Quantity</th>
@@ -43,7 +43,7 @@ const MyEnrollClass = () => {
                                 <td>
                                     {item.email}
                                 </td>
-                                <td>{item.quantity}</td>
+                                <td>{item.available_seats}</td>
                                 <td className="">{item.price}$
                                 </td>
 
