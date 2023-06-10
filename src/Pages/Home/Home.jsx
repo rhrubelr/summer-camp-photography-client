@@ -4,6 +4,7 @@ import PopularInstructor from '../PopularInstructor/PopularInstructor';
 import PopularClass from '../PopularClass/PopularClass';
 import { useTypewriter } from 'react-simple-typewriter'
 import ExtraSection from '../ExtraSection/ExtraSection';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
@@ -25,6 +26,9 @@ const Home = () => {
     return (
 
         <div>
+            <Helmet>
+                <title> Photography School | Home</title>
+            </Helmet>
             <Banner></Banner>
             <h2 className='text-center font-extrabold text-4xl my-28'> Top Instructor: <span className='my-4  text-3xl font-bold text-orange-500 text-center'><span>{text}</span> </span> </h2>
             <PopularInstructor></PopularInstructor>
