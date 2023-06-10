@@ -126,9 +126,9 @@ console.log(clientSecret)
             style: {
               base: {
                 fontSize: '16px',
-                color: 'white',
+                color: 'black',
                 '::placeholder': {
-                  color: 'white',
+                  color: 'black',
                 },
               },
               invalid: {
