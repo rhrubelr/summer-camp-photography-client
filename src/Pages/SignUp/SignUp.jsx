@@ -30,7 +30,7 @@ const Signin = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email };
+                        const saveUser = {role: data.role, name: data.name, email: data.email };
                         fetch("http://localhost:5000/users", {
                             method: "POST",
                             headers: {
@@ -88,6 +88,8 @@ const Signin = () => {
                                         {...register("name", { required: true, maxLength: 80 })}
                                         className="input input-bordered text-black"
                                     />
+                                     
+
                                     {errors.name && <p className="text-red-500">name required</p>}
                                 </div>
                                 <div className="form-control">

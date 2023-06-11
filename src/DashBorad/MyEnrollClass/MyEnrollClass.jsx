@@ -27,7 +27,7 @@ const MyEnrollClass = () => {
                     className="table w-full">
                     {/* head */}
                     <thead>
-                        <tr className="text-red-400 text-xl">
+                        <tr className="text-orange-800 text-xl">
                             <th>#</th>
                             <th>My Email</th>
                             <th>Class Quantity</th>

@@ -51,11 +51,21 @@ const DashBoard = () => {
               All Users <div className="badge badge-success"></div>
             </NavLink></li>
 
+
+            <li><NavLink to='/dashBoard/add-class'><FaShoppingCart></FaShoppingCart>
+              Add Class <div className="badge badge-success"></div>
+            </NavLink></li>
+
+
+
+            <li><NavLink to='/dashBoard/my-class'><FaShoppingCart></FaShoppingCart>
+              My Class <div className="badge badge-success"></div>
+            </NavLink></li>
+
             <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
 
 
 
-            <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> About Me</NavLink></li>
 
           </ul>
 

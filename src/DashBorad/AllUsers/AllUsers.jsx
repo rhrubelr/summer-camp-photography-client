@@ -1,8 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
-import React from "react";
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import {  FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
 
 
 const AllUsers = () => {
@@ -11,6 +11,18 @@ const AllUsers = () => {
         const res = await axiosSecure.get('/users')
         return res.data;
     });
+
+    // const [users, setUsers] = useState([]);
+    // useEffect( ()=>{
+    //     fetch('http://localhost:5000/users')
+    //     .then(res=> res.json())
+    //     .then(data=> {
+    //         setUsers(data)
+    //         console.log(data)
+    //     })
+    // },[])
+
+
 
     const handleDelete = user => {
         // console.log(id)
@@ -96,15 +108,15 @@ const AllUsers = () => {
 
 
             <div data-aos="fade-up" className="overflow-x-auto ">
-                <h3 className="text-center text-3xl mb-5 font-bold mt-14 text-white ">
+                <h3 className="text-center text-3xl mb-5 font-bold mt-14 ">
                     Total User: <span className="text-red-500">{users.length}</span>
                 </h3>
-                <table className="table text-white  w-full">
+                <table className="table   w-full">
 
                     {/* head */}
                     <thead>
 
-                        <tr className="text-white text-xl">
+                        <tr className=" text-xl">
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -118,7 +130,7 @@ const AllUsers = () => {
                                 <tr
                                     key={user._id}>
                                     <th>{index + 1}</th>
-                                    <td>{user.displayName}</td>
+                                    {/* <td>{user.na}</td> */}
                                     <td>{user.email}</td>
                                     <td>{user.role === 'admin' ? 'admin' :
                                         <button onClick={() => handleMakeAdmin(user._id)} className="btn btn-sm bg-sky-500 text-white border-0 ">Admin</button>

@@ -18,7 +18,7 @@ const PaymentHistory = () => {
            className="table w-full">
             {/* head */}
             <thead>
-              <tr className="text-red-500 text-xl">
+              <tr className=" text-xl">
                 <th>#</th>
                 <th>Payment Email</th>
                 <th>Payment Date</th>

@@ -32,6 +32,9 @@ const Login = () => {
                 })
                 navigate(from, { replace: true });
             })
+
+            navigate('/')
+
             .catch(error => {
                 console.log(error)
             })
@@ -72,7 +75,7 @@ const Login = () => {
                                         type="password"
                                         placeholder="type your password"
                                         {...register("password", { required: true, maxLength: 80 })}
-                                        className="input input-bordered text-white"
+                                        className="input input-bordered "
                                     />
                                 </div>
                                 <div className="form-control mt-6">
