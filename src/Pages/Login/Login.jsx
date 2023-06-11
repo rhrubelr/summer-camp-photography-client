@@ -48,7 +48,7 @@ const Login = () => {
             <div className=" mt-11" data-aos="fade-up" >
                 <div className="  w-10/12 md:w-4/12 lg:w-5/12 mx-auto  ">
                     <div className="card  w-full  shadow-2xl bg-teal-950 ">
-                        <h2 className="text-center pt-5 text-3xl text-orange-800 ">
+                        <h2 className="text-center pt-5 text-3xl text-white ">
                             Please Login Here
                         </h2>
                         <div className="card-body">
@@ -59,7 +59,7 @@ const Login = () => {
                                     </label>
                                     <input
                                         type="email"
-                                        placeholder="email"
+                                        placeholder="type your email"
                                         {...register("email", { required: true, maxLength: 80 })}
                                         className="input input-bordered text-black"
                                     />
@@ -70,7 +70,7 @@ const Login = () => {
                                     </label>
                                     <input
                                         type="password"
-                                        placeholder="password"
+                                        placeholder="type your password"
                                         {...register("password", { required: true, maxLength: 80 })}
                                         className="input input-bordered text-white"
                                     />

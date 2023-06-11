@@ -20,6 +20,7 @@ const Navbar = () => {
         <li><Link to='/allClasses'><a>All Class</a></Link></li>
         <li><Link to='/dashBoard'><a>Dash Board</a></Link></li>
 
+        
 
     </>
     return (
@@ -48,7 +49,7 @@ const Navbar = () => {
                     {/* <Link to="/login"><a className="btn">Login</a></Link>
                      */}
                     {
-                        user ? <> <img src={user?.photoURL} alt="" />
+                        user ? <> <img className='rounded-full h-10 w-10' src={user?.photoURL} alt="" />
                         <button onClick={handleLogOut} className='btn btn-ghost'>Log Out</button></> : <> <button className='btn btn-ghost'><Link to="/login">Login</Link></button> </>
                     }
                 </div>

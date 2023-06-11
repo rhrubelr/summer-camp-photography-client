@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProviders";
@@ -11,6 +11,8 @@ import SocialLogin from "../Login/SocialLogin";
 const Signin = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [erroror, setError] = useState('')
     console.log(erroror)
     const {
@@ -47,9 +49,10 @@ const Signin = () => {
                                         showConfirmButton: false,
                                         timer: 1500,
                                     });
-                                    navigate("/");
+                                    navigate(from, { replace: true });
                                 }
                             });
+                            navigate('/')
                     })
                     .then((error) => {
                         console.log(error);

@@ -70,7 +70,7 @@ const AllClassCart = ({ allClass }) => {
                     <p> Student Seat: {available_seats}</p>
                     <p> price: ${price}</p>
                     <div className="card-actions">
-                        < button onClick={()=> handleEnroll(allClass)}  className="btn btn-primary">Add to cart</button>
+                        < button onClick={()=> handleEnroll(allClass)}  className="btn btn-primary">Enroll Now</button>
                     </div>
                 </div>
             </div>

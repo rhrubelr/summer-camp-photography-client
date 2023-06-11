@@ -1,5 +1,6 @@
 import InstructorCart from './InstructorCart';
 import InstructorHooks from '../../Hooks/InstructorHooks';
+import { Helmet } from 'react-helmet';
 
 
 const Instructor = () => {
@@ -14,6 +15,9 @@ const Instructor = () => {
     // }, [])
     return (
         <div>
+            <Helmet>
+                <title> Photography School | Instructor</title>
+            </Helmet>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto my-10'>
                 {
                     populars.map(popular =>
