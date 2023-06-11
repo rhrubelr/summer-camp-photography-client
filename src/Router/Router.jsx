@@ -12,6 +12,8 @@ import SelectedClass from '../DashBorad/SelectedClass/SelectedClass';
 import Payment from '../DashBorad/Payment/Payment';
 import PaymentHistory from '../DashBorad/PaymentHistory/PaymentHistory';
 import MyEnrollClass from '../DashBorad/MyEnrollClass/MyEnrollClass';
+import AdminRoute from './AdminRoute';
+import AllUsers from '../DashBorad/AllUsers/AllUsers';
 
 
 export const router = createBrowserRouter([
@@ -65,6 +67,10 @@ export const router = createBrowserRouter([
           {
             path: 'myEnrollClass',
             element: <MyEnrollClass></MyEnrollClass>,
+          },
+          {
+            path: 'all-users',
+            element: <AdminRoute><AllUsers></AllUsers></AdminRoute>,
           }
          ]
       },

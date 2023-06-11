@@ -47,11 +47,15 @@ const DashBoard = () => {
               My Enroll Class <div className="badge badge-success"></div>
             </NavLink></li>
 
+            <li><NavLink to='/dashBoard/all-users'><FaShoppingCart></FaShoppingCart>
+              All Users <div className="badge badge-success"></div>
+            </NavLink></li>
+
+            <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
 
 
 
             <li><NavLink to='/deshbord/reservation'><FaCalendar></FaCalendar> About Me</NavLink></li>
-            <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
 
           </ul>
 
