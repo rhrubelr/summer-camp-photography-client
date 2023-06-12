@@ -10,7 +10,8 @@ const SocialLogin = () => {
     let from = location.state?.from?.pathname || "/";
 
     const handleLogin = () => {
-        googleLogin().then((result) => {
+        googleLogin()
+        .then((result) => {
             const loggedUser = result.user;
             console.log(loggedUser);
             updateUserProfile(loggedUser.photoURL)
@@ -19,7 +20,7 @@ const SocialLogin = () => {
                 email: loggedUser.email,
                 photoURL: loggedUser.photoURL
             };
-            fetch("http://localhost:5000/users", {
+            fetch("https://photography-school-server.vercel.app/users", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
@@ -30,6 +31,8 @@ const SocialLogin = () => {
                 .then(() => {
                     navigate(from, { replace: true });
                 });
+
+                
         });
     };
 

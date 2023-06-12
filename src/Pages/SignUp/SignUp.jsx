@@ -13,6 +13,11 @@ const Signin = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+
+
+
+
     const [erroror, setError] = useState('')
     console.log(erroror)
     const {
@@ -30,8 +35,8 @@ const Signin = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        const saveUser = {role: data.role, name: data.name, email: data.email };
-                        fetch("http://localhost:5000/users", {
+                        const saveUser = { role: data.role, name: data.name, email: data.email };
+                        fetch("https://photography-school-server.vercel.app/users", {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json",
@@ -52,7 +57,7 @@ const Signin = () => {
                                     navigate(from, { replace: true });
                                 }
                             });
-                            navigate('/')
+                        navigate('/')
                     })
                     .then((error) => {
                         console.log(error);
@@ -64,6 +69,35 @@ const Signin = () => {
                 console.log(error)
             });
     };
+
+
+
+
+    const [errorPass, setErrorPass] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [password, setPassword] = useState("")
+    console.log(password)
+
+
+    const checkValidation = (e) => {
+        const confPass = e.target.value;
+        setConfirmPassword(confPass);
+        if (password !== confPass) {
+            setErrorPass("password don't match")
+        }
+        else {
+            setErrorPass("password don't match")
+        }
+    }
+
+
+
+
+
+
+
+
+
     //   console.log(errors);
     return (
         <div>
@@ -74,7 +108,7 @@ const Signin = () => {
                 <div className=" w-10/12 md:w-4/12 lg:w-5/12 mx-auto  ">
                     <div className="card  w-full  shadow-2xl bg-teal-950 ">
                         <h2 className="text-center pt-5 text-3xl text-sky-500 ">
-                            Please Sign up Here 
+                            Please Sign up Here
                         </h2>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(onSubmit)}>
@@ -88,7 +122,7 @@ const Signin = () => {
                                         {...register("name", { required: true, maxLength: 80 })}
                                         className="input input-bordered text-black"
                                     />
-                                     
+
 
                                     {errors.name && <p className="text-red-500">name required</p>}
                                 </div>
@@ -109,6 +143,8 @@ const Signin = () => {
                                         <span className="label-text text-white">Password</span>
                                     </label>
                                     <input
+                                        defaultValue={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         type="password"
                                         placeholder=" your password"
                                         {...register("password", {
@@ -143,6 +179,8 @@ const Signin = () => {
                                         </span>
                                     </label>
                                     <input
+                                        defaultValue={confirmPassword}
+                                        onChange={(e) => checkValidation(e)}
                                         type="password"
                                         placeholder="confirm your password"
                                         {...register("confirmPassword", {
@@ -156,18 +194,25 @@ const Signin = () => {
                                         errors.confirmPassword?.type === 'required' &&
                                         <p className="text-red-500">Passwors required</p>
                                     }
-                                    {
-                                        errors.confirmPassword?.type === 'minLength' &&
-                                        <p className="text-red-500">Passwors must be 6 characters</p>
-                                    }
-                                    {
-                                        errors.confirmPassword?.type === 'maxLength' &&
-                                        <p className="text-red-500">Passwors must be less than 20 characters</p>
-                                    }
+
+
                                     {
                                         errors.confirmPassword?.type === 'pattern' &&
-                                        <p className="text-red-500">Passwors must be one uppercase one lowercase one spicial characters</p>
+                                        <p className="text-red-500">Don't match password</p>
                                     }
+
+                                    {/* {
+                                        errors.confirmPassword?.type === 'minLength' &&
+                                        <p className="text-red-500">Passwors must be 6 characters</p>
+                                    } */}
+                                    {/* {
+                                        errors.confirmPassword?.type === 'maxLength' &&
+                                        <p className="text-red-500">Passwors must be less than 20 characters</p>
+                                    } */}
+                                    {/* {
+                                        errors.confirmPassword?.type === 'pattern' &&
+                                        <p className="text-red-500">Passwors must be one uppercase one lowercase one spicial characters</p>
+                                    } */}
 
                                 </div>
                                 <div className="form-control">

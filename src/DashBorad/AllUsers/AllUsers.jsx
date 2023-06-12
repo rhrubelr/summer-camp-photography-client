@@ -14,7 +14,7 @@ const AllUsers = () => {
 
     // const [users, setUsers] = useState([]);
     // useEffect( ()=>{
-    //     fetch('http://localhost:5000/users')
+    //     fetch('https://photography-school-server.vercel.app/users')
     //     .then(res=> res.json())
     //     .then(data=> {
     //         setUsers(data)
@@ -37,7 +37,7 @@ const AllUsers = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/user-delete/${user._id}`, {
+                fetch(`https://photography-school-server.vercel.app/user-delete/${user._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -61,7 +61,7 @@ const AllUsers = () => {
 
     const handleMakeAdmin = id => {
         console.log(id)
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://photography-school-server.vercel.app/users/admin/${id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())
@@ -82,7 +82,7 @@ const AllUsers = () => {
 
     const handleMakeInstructor = id => {
         console.log(id)
-        fetch(`http://localhost:5000/users/instructor/${id}`, {
+        fetch(`https://photography-school-server.vercel.app/users/instructor/${id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())

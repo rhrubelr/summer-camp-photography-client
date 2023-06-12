@@ -20,7 +20,7 @@ const MyClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/my-classes/${item._id}`, {
+                fetch(`https://photography-school-server.vercel.app/my-classes/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -80,7 +80,7 @@ const MyClasses = () => {
                                     </div>
                                 </td>
                                 <td>{item.email}</td>
-                                <td>{item.danceName}</td>
+                                <td>{item.name}</td>
                                 <td className="">{item.price}$
                                 </td>
                                 <th>

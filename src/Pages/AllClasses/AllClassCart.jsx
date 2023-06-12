@@ -8,7 +8,7 @@ import { AuthContext } from '../../Provider/AuthProviders';
 // ..
 AOS.init();
 
-const AllClassCart = ({ allClass }) => {
+const AllClassCart = ({ allClass , refetch }) => {
     const {_id, name, image, available_seats, instructor, price } = allClass;
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
@@ -18,13 +18,14 @@ const AllClassCart = ({ allClass }) => {
     const handleEnroll = ()=>{
         if(user && user.email){
             const enrollData = {enrollId: _id, name, image, price,instructor,available_seats,  email: user.email }
-            fetch('http://localhost:5000/all-enroll', {
+            fetch('https://photography-school-server.vercel.app/all-enroll', {
                 method: 'POST',
                 headers: {
                     'content-type' : 'application/json'
                 },
                 body: JSON.stringify(enrollData)
             })
+
             .then( res => res.json())
             .then(data => {
                 if(data.insertedId){
@@ -54,6 +55,39 @@ const AllClassCart = ({ allClass }) => {
                 }
               });
         }
+
+
+        if(user && user.email){
+            const seats = parseFloat(available_seats -1 );
+            // const enrolls = parseFloat(enroll + 1)
+            console.log(seats)
+         
+            const enrolData = {available_seats: seats}
+            console.log(enrolData)
+            // const enrollData = {enrollId: _id, danceName, image, instructorName, price, rating, availableSeats, email: user.email }
+            fetch(`https://photography-school-server.vercel.app/class-update/${_id}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(enrolData),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              refetch()
+              // if (data. modifiedCount > 0) {
+               
+              //   Swal.fire({
+              //     title: "success!",
+              //     text: "Your toys is updated!!",
+              //     icon: "success",
+              //     confirmButtonText: "okk",          
+              //   });
+              //   refetch()
+              // }
+    });
+      }
         
     
     }

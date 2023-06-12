@@ -3,12 +3,17 @@ import { NavLink } from "react-router-dom";
 import { FaHome, FaCalendar, FaShoppingCart, FaWallet, FaUtensils, FaBook, FaUsers } from 'react-icons/fa'
 import useEnroll from "../Hooks/useEnroll";
 import { Helmet } from "react-helmet";
+import useAdmin from "../Hooks/useAdmin";
+import useInstructor from "../Hooks/useInstructor";
+
 
 // import useCart from "../hooks/useCart";
 // import useAdmin from "../hooks/useAdmin";
 
 
 const DashBoard = () => {
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
   // const [cart]=useCart()
   // Todo
   // const isAdmin = true;
@@ -38,31 +43,75 @@ const DashBoard = () => {
             {/* Sidebar content here */}
 
 
-            <li><NavLink to='/'><FaHome></FaHome>User Home</NavLink></li>
-            <li> <NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
+            {
+              isAdmin ?
+                (<>
+                  <li><NavLink to='/'><FaHome></FaHome>Admin Home</NavLink></li>
+
+                  <li><NavLink to='/dashBoard/all-users'><FaShoppingCart></FaShoppingCart>
+                    All Users <div className="badge badge-primary"></div>
+                  </NavLink></li>
+
+                </>)
+                : isInstructor ? (
+                  <>
+                    <li><NavLink to='/'><FaHome></FaHome>Instructor Home</NavLink></li>
+
+                    <li><NavLink to='/dashBoard/add-class'><FaShoppingCart></FaShoppingCart>
+                      Add Class <div className="badge badge-success"></div>
+                    </NavLink></li>
+
+                    <li><NavLink to='/dashBoard/my-class'><FaShoppingCart></FaShoppingCart>
+                      My Class <div className="badge badge-success"></div>
+                    </NavLink></li>
+                  </>
+                )
+                  : (
+                    <>
+                    <li><NavLink to='/'><FaHome></FaHome>Student Home</NavLink></li>
+                      <li> <NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
+                        My Selected Class <div className="badge badge-secondary"> {cart.length}</div>
+                      </NavLink></li>
+
+
+                      <li><NavLink to='/dashBoard/myEnrollClass'><FaShoppingCart></FaShoppingCart>
+                        My Enroll Class <div className="badge badge-success"></div>
+                      </NavLink></li>
+
+
+                      <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
+
+                    </>
+                  )
+
+
+            }
+
+            {/* <li><NavLink to='/'><FaHome></FaHome>Admin Home</NavLink></li> */}
+            {/* <li> <NavLink to='/dashBoard/selectedClass'><FaShoppingCart></FaShoppingCart>
               My Selected Class <div className="badge badge-secondary"> {cart.length}</div>
-            </NavLink></li>
+            </NavLink></li> */}
 
-            <li><NavLink to='/dashBoard/myEnrollClass'><FaShoppingCart></FaShoppingCart>
+            {/* <li><NavLink to='/dashBoard/myEnrollClass'><FaShoppingCart></FaShoppingCart>
               My Enroll Class <div className="badge badge-success"></div>
-            </NavLink></li>
+            </NavLink></li> */}
 
-            <li><NavLink to='/dashBoard/all-users'><FaShoppingCart></FaShoppingCart>
+            {/* <li><NavLink to='/dashBoard/all-users'><FaShoppingCart></FaShoppingCart>
               All Users <div className="badge badge-success"></div>
-            </NavLink></li>
+            </NavLink></li> */}
 
 
-            <li><NavLink to='/dashBoard/add-class'><FaShoppingCart></FaShoppingCart>
+            {/* <li><NavLink to='/dashBoard/add-class'><FaShoppingCart></FaShoppingCart>
               Add Class <div className="badge badge-success"></div>
-            </NavLink></li>
+            </NavLink></li> */}
 
 
 
-            <li><NavLink to='/dashBoard/my-class'><FaShoppingCart></FaShoppingCart>
+            {/* <li><NavLink to='/dashBoard/my-class'><FaShoppingCart></FaShoppingCart>
               My Class <div className="badge badge-success"></div>
-            </NavLink></li>
+            </NavLink></li> */}
 
-            <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
+            {/* <li><NavLink to='/dashBoard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li> */}
 
 
 

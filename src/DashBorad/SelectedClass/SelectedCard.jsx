@@ -26,8 +26,8 @@ const SelectedCard = ({ card }) => {
                         <thead>
                             <tr className="text-white text-xl">
                                 <th>#</th>
-                                <th>Dance Image</th>
-                                <th>Dance Name</th>
+                                <th>Photography Image</th>
+                                <th>Photography Name</th>
                                 <th>Price</th>
                                 <th>Action</th>
                             </tr>
@@ -47,7 +47,7 @@ const SelectedCard = ({ card }) => {
                                             </div>
                                         </div>
                                     </td>
-                                    <td>{item.danceName}</td>
+                                    <td>{item.name}</td>
                                     <td className="">{item.price}$
                                     </td>
                                     <th>

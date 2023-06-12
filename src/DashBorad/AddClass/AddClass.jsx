@@ -31,12 +31,12 @@ const AddClass = () => {
             .then((imgResponse) => {
                 if (imgResponse.success) {
                     const imgUrl = imgResponse.data.display_url;
-                    const { price, instructorName, name, rating, availableSeats, email } = data;
+                    const { price, instructor, name, rating, available_seats, email } = data;
                     const newItem = {
-                        instructorName,
+                        instructor,
                         price: parseFloat(price),
                         name,
-                        availableSeats: parseFloat(availableSeats),
+                        available_seats: parseFloat(available_seats),
                         image: imgUrl,
                         email,
                         rating: parseFloat(rating)
@@ -59,7 +59,7 @@ const AddClass = () => {
             });
     };
 
-    //   name, image, instructorName, price, rating, availableSeats
+    //   name, image, instructor, price, rating, available_seats
 
     console.log(errors);
     return (
@@ -76,12 +76,13 @@ const AddClass = () => {
                 <input
                     type="text"
                     placeholder="Instructor name"
-                    {...register("instructorName", { required: true, maxLength: 80 })}
+                    {...register("instructor", { required: true, maxLength: 80 })}
                     className="input input-bordered w-full "
                 />
 
                 <input
                     type="email"
+                    placeholder="email"
                     defaultValue={user?.email}
                     {...register("email", { required: true, maxLength: 80 })}
                     className="input input-bordered w-full "
@@ -98,7 +99,7 @@ const AddClass = () => {
                 <input
                     type="number"
                     placeholder="Available Seats"
-                    {...register("availableSeats", { required: true, maxLength: 80 })}
+                    {...register("available_seats", { required: true, maxLength: 80 })}
                     className="input input-bordered w-full "
                 />
 

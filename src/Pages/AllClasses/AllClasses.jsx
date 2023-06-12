@@ -4,7 +4,7 @@ import AllClassCart from './AllClassCart';
 import { Helmet } from 'react-helmet';
 
 const AllClasses = () => {
-    const [classes] = ClassesHooks();
+    const [classes, loading, refetch] = ClassesHooks();
     return (
         <div>
             <Helmet>
@@ -16,6 +16,7 @@ const AllClasses = () => {
                 <AllClassCart
                    key={allClass._id}
                    allClass={allClass}
+                   refetch={refetch}
                 ></AllClassCart>)
                 }
             </div>

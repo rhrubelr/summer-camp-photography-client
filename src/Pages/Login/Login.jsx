@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { Helmet } from "react-helmet";
@@ -11,6 +11,12 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+    const [show, setShow] = useState(false)
+    const handlePasswordShow =()=>{
+        setShow(!show)
+    }
+
 
 
 
@@ -67,16 +73,20 @@ const Login = () => {
                                         className="input input-bordered text-black"
                                     />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control relative">
                                     <label className="label">
                                         <span className="label-text text-white">Password</span>
                                     </label>
                                     <input
-                                        type="password"
+                                       type ={show? "text" : "password"}
+                                       
                                         placeholder="type your password"
                                         {...register("password", { required: true, maxLength: 80 })}
                                         className="input input-bordered "
                                     />
+                                    <span onClick={handlePasswordShow} className="absolute cursor-pointer text-orange-800 font-semibold top-12 right-5">
+                                        {show? "Hide" : "Show"}
+                                    </span>
                                 </div>
                                 <div className="form-control mt-6">
                                     <input
